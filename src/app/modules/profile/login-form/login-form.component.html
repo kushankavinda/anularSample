@@ -1,0 +1,28 @@
+<div class="container">
+
+    
+    <div *ngIf="user">
+      <img src="{{ user.photoUrl }}">
+      <h4>{{ user.name }}</h4>
+      <p>{{ user.email }}</p>
+    </div>
+
+    <p-button label="Login With Facebook" (click)="signInWithFB()"></p-button>
+    <p-button label="Login With Google" (click)="signInWithGoogle()"></p-button>
+    <p-button label="Logout" (click)="signOut()"></p-button>
+
+  <h1>Login</h1>
+  <form>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="alterEgo">Alter Ego</label>
+      <input type="text" class="form-control" id="alterEgo">
+    </div>
+
+    <button pButton type="button" label="comfirm" icon="pi pi-check" style="margin-right: .25em"></button>
+  </form>
+</div>

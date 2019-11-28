@@ -1,0 +1,12 @@
+<div class="col-md-3"  *ngFor="let item of adds; let i = index">
+    <p-card header="{{item.category}}" subheader="{{item.subject}}" [style]="{width: '360px'}" styleClass="ui-card-shadow">
+     <!--  <p-header>
+            <img src="Card" src="https://www.jquery-az.com/html/images/banana.jpg">
+        </p-header>  -->
+        <div> {{item.description}} </div>
+        <p-footer *ngIf="routerUrl=='/advertisment'">
+            <button pButton type="button" (click)="Save(i,item)" label="Save" icon="pi pi-check" style="margin-right: .25em"></button>
+            <button pButton type="button" (click)="Cancel(item.id)" label="Cancel" icon="pi pi-times" class="ui-button-secondary"></button>
+        </p-footer>
+    </p-card>      
+</div>
